@@ -1,0 +1,143 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+    <head> 
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <title>Dashboard</title>         
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> 
+        <link rel="stylesheet" href="../assets/styles/work.css">
+        <link rel="stylesheet" href="../assets/styles/font-awesome.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="   crossorigin="anonymous"></script>
+    </head>
+    <body> 
+        <nav class="navbar navDetail navbar-fixed-top"> 
+            <div class="navbar-header"> 
+                <a class="navbar-brand"> 
+                    <img alt="Brand" src="../assets/images/src/app/logo.png"> 
+                </a>                 
+            </div>             
+            <div class="navbar-brand">Bo Li</div>             
+            <div class="navbar-brand">06/15/2016</div>             
+            <button>Log Out</button>             
+        </nav>         
+        <div> 
+            <div class="row"> 
+                <div class="col-sm-3 col-md-2 sidebar"> 
+                    <ul class="nav nav-sidebar"> 
+                        <li class="active"> 
+                            <a href="#"><i class="fa fa-cloud" aria-hidden="true"></i>&nbsp Overview</a> 
+                        </li>                         
+                        <li> 
+                            <a href="#"><i class="fa fa-cloud" aria-hidden="true">&nbsp Work</i></a> 
+                        </li>                         
+                        <li> 
+                            <a href="#"><i class="fa fa-cloud" aria-hidden="true">&nbsp Producer</i></a> 
+                        </li>                         
+                        <li> 
+                            <a href="#"><i class="fa fa-cloud" aria-hidden="true">&nbsp Contact</i></a> 
+                        </li>                         
+                    </ul>                     
+                </div>                 
+                <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main"> 
+                    <div class="mainHeader">
+                        <ul class="nav navbar-nav navbar-left">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <button>Add Item</button>
+                        <input type="text" placeholder="Name">
+                        <input type="text" placeholder="Author">
+                        <input type="text" placeholder="Like">
+                        <input type="text" placeholder="Comment">
+                    </div>
+                    <div class="row placeholders"> 
+                        <div class="col-xs-6 col-sm-4 placeholder">
+                            <img src="http://pinegrow.com/placeholders/img4.jpg" class="img-responsive" alt="Generic placeholder thumbnail"> 
+                            <h4>Label</h4> 
+                            <span class="text-muted">Something else</span> 
+                        </div>                         
+                        <div class="col-xs-6 col-sm-4 placeholder">
+                            <img src="http://pinegrow.com/placeholders/img3.jpg" class="img-responsive" alt="Generic placeholder thumbnail"> 
+                            <h4>Label</h4> 
+                            <span class="text-muted">Something else</span> 
+                        </div>                         
+                        <div class="col-xs-6 col-sm-4 placeholder">
+                            <img src="http://pinegrow.com/placeholders/img8.jpg" class="img-responsive" alt="Generic placeholder thumbnail"> 
+                            <h4>Label</h4> 
+                            <span class="text-muted">Something else</span> 
+                        </div>
+                        <div class="col-xs-6 col-sm-4 placeholder">
+                            <img src="http://pinegrow.com/placeholders/img8.jpg" class="img-responsive" alt="Generic placeholder thumbnail">
+                            <h4>Label</h4>
+                            <span class="text-muted">Something else</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 placeholder">
+                            <img src="http://pinegrow.com/placeholders/img8.jpg" class="img-responsive" alt="Generic placeholder thumbnail">
+                            <h4>Label</h4>
+                            <span class="text-muted">Something else</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 placeholder">
+                            <img src="http://pinegrow.com/placeholders/img8.jpg" class="img-responsive" alt="Generic placeholder thumbnail">
+                            <h4>Label</h4>
+                            <span class="text-muted">Something else</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 placeholder">
+                            <img src="http://pinegrow.com/placeholders/img8.jpg" class="img-responsive" alt="Generic placeholder thumbnail">
+                            <h4>Label</h4>
+                            <span class="text-muted">Something else</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 placeholder">
+                            <img src="http://pinegrow.com/placeholders/img8.jpg" class="img-responsive" alt="Generic placeholder thumbnail">
+                            <h4>Label</h4>
+                            <span class="text-muted">Something else</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 placeholder">
+                            <img src="http://pinegrow.com/placeholders/img8.jpg" class="img-responsive" alt="Generic placeholder thumbnail">
+                            <h4>Label</h4>
+                            <span class="text-muted">Something else</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 placeholder">
+                            <img src="http://pinegrow.com/placeholders/img8.jpg" class="img-responsive" alt="Generic placeholder thumbnail">
+                            <h4>Label</h4>
+                            <span class="text-muted">Something else</span>
+                        </div>
+                    </div>
+                    <div class="table-responsive"> 
+                        <table class="table table-striped"> 
+                            <thead> 
+                                <tr> 
+                                    <th>Name</th>
+                                    <th>Auther</th>
+                                    <th>Like</th>
+                                    <th>Comment</th>
+                                    <th>Modify</th>
+                                    <th>Remove</th>
+                                </tr>                                 
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1,001</td>
+                                    <td>Lorem</td>
+                                    <td>ipsum</td>
+                                    <td>dolor</td>
+                                    <td>Edit</td>
+                                    <td>Remove</td>
+                                </tr>
+                            </tbody>
+                        </table>                         
+                    </div>                     
+                </div>                 
+            </div>             
+        </div>         
+    </body>     
+</html>
