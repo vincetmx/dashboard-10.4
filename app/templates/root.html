@@ -1,0 +1,32 @@
+<nav class="navbar navDetail navbar-fixed-top">
+    <div class="navbar-header">
+        <a class="navbar-brand">
+            <img alt="Brand" src="../assets/images/src/app/logo.png">
+        </a>
+    </div>
+    <div class="navbar-brand">Bo Li</div>
+    <div class="navbar-brand">06/15/2016</div>
+    <button>Log Out</button>
+</nav>
+<div>
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+                <li>
+                    <a ui-sref=".overview"><i class="fa fa-cloud" aria-hidden="true"></i>&nbsp Overview</a>
+                </li>
+                <li>
+                    <a ui-sref=".work"><i class="fa fa-briefcase" aria-hidden="true">&nbsp Work</i></a>
+                </li>
+                <li>
+                    <a ui-sref=".producer"><i class="fa fa-product-hunt" aria-hidden="true">&nbsp Producer</i></a>
+                </li>
+                <li>
+                    <a ui-sref=".contact"><i class="fa fa-compress" aria-hidden="true">&nbsp Contact</i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div ui-view></div>
+<link rel="stylesheet" href="../assets/styles/work.css">

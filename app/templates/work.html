@@ -1,0 +1,59 @@
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ng-controller="workController">
+    <div class="mainHeader">
+        <div class="nav navbar-nav navbar-left">
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Option
+                    <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a ng-click="showme=true">List</a></li>
+                    <li><a ng-click="showme=false">Card</a></li>
+                </ul>
+            </div>
+        </div>&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="btn btn-danger"> Add Item</button>&nbsp;&nbsp;&nbsp;&nbsp;
+        <input ng-model="query" type="text" placeholder="Name">
+        <input type="text" placeholder="Author">
+        <input type="text" placeholder="Like">
+        <input type="text" placeholder="Comment">
+    </div>
+    <div class="row" ng-hide="showme">
+        <div ng-repeat="myTable in myData.works | filter:query | orderBy:'name'" class="col-xs-12 col-sm-6 col-md-4">
+            <div ng-src="{{myTable.image}}" class="thumbnail" style="border: 0">
+                <img ng-src="{{myTable.image}}">
+                <div class="caption" style="padding: 0">
+                    <h6>{{myTable.title}}</h6>
+                    <h6>{{myTable.author}}</h6>
+                    <h6>{{myTable.comment}}</h6>
+                    <h6>{{myTable.like}}</h6>
+                    <p style="float: right"><a>Edit</a> | <a>Delete</a></p><br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="table-responsive" ng-show="showme">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Auther</th>
+                    <th>Like</th>
+                    <th>Comment</th>
+                    <th>Modify</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody ng-repeat="myTable in myData.works">
+                <tr>
+                    <td>{{myTable.title}}</td>
+                    <td>{{myTable.author}}</td>
+                    <td>{{myTable.like}}</td>
+                    <td>{{myTable.comment}}</td>
+                    <td><a>Edit</a></td>
+                    <td><a>Delete</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div ui-view></div>
+<link rel="stylesheet" href="../assets/styles/work.css">
