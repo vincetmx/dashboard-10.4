@@ -12,18 +12,19 @@ var routerApp = angular.module('routerApp', ['ui.router']);
 
 routerApp.config(function($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise('/root');
+    $urlRouterProvider.otherwise('/login');
 
     $stateProvider
 
         .state('root', {
             url: '/root',
-            templateUrl: '../templates/root.html'
+            templateUrl: '../templates/root.html',
         })
 
         .state('root.work', {
             url: '/work',
-            templateUrl: '../templates/work.html'
+            templateUrl: '../templates/work.html',
+            controller:'workController'
         })
 
         .state('root.overview', {
@@ -43,6 +44,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
 
         .state('login', {
             url: '/login',
-            templateUrl: '../templates/login.html'
+            templateUrl: '../templates/login.html',
+            controller:'login'
         })
 });

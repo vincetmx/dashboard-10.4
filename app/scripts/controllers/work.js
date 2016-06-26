@@ -8,4 +8,7 @@ routerApp.controller('workController',function($scope, $http){
         .success(function(data) {
             $scope.myData = data;
         })
+    $scope.orderByMe = function(x) {
+        $scope.myOrderBy = x;
+    }
 });

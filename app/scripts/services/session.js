@@ -3,17 +3,16 @@
 // Description: Define the sessionService that has 3 functionalities: 
 // get, set, and destroy for users' data in the session storage
 
-angular.module('routerApp')
-.factory('session', ['$http', function($http){
-	return{
-		set:function(key,value){
-			return sessionStorage.setItem(key,value);
+routerApp.factory('session', function() {
+	return {
+		set: function (key, value) {
+			return sessionStorage.setItem(key, value);
 		},
-		get:function(key){
+		get: function (key) {
 			return sessionStorage.getItem(key);
 		},
-		destroy:function(key){
+		destroy: function (key) {
 			return sessionStorage.removeItem(key);
 		}
 	};
-}]);
+});

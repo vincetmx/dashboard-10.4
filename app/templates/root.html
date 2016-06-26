@@ -1,17 +1,17 @@
-<nav class="navbar navDetail navbar-fixed-top">
+<nav class="navbar navDetail navbar-fixed-top" ng-controller="userCtrl">
     <div class="navbar-header">
         <a class="navbar-brand">
             <img alt="Brand" src="../assets/images/src/app/logo.png">
         </a>
     </div>
-    <div class="navbar-brand">Bo Li</div>
-    <div class="navbar-brand">06/15/2016</div>
-    <button>Log Out</button>
+    <div class="navbar-brand" ng-model="name">{{name}}</div>
+    <div class="navbar-brand">{{CurrentDate | date: 'MM/dd/yyyy'}}</div>
+    <button type="submit" ng-click="logOut()">Sign out</button>
 </nav>
 <div>
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
-            <ul class="nav nav-sidebar">
+            <ul class="nav nav-sidebar list-inline">
                 <li>
                     <a ui-sref=".overview"><i class="fa fa-cloud" aria-hidden="true"></i>&nbsp Overview</a>
                 </li>

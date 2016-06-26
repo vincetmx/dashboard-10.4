@@ -3,21 +3,14 @@
 // Description: Define the following functionalities:
 // Making service calls to login a user
 
-app.controller('loginController', function($scope, $state, authenticate, session) {
-
+routerApp.controller('login', function($scope, $location, authenticate, session) {
     $scope.submitForm = function() {
-        session.set("user", $scope.userName);
-        session.set("psw", $scope.password);
-        
-        if (authenticate.getUser() == "success") {
-           
-            $state.go("root.work");            
-
-        } else {
-
-            console.log("error");
-            
-        }
+        session.set("user", $scope.username);
+        session.set("password", $scope.password);
+        authenticate.login($scope.username, $scope.password, function(response) {
+            if(response) {
+                $location.path("/root");
+            }
+        });
     }
-
 });

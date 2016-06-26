@@ -1,26 +1,21 @@
 'use strict';
 // AUTHENTICATE SERVICE
-// Description: Define the authenticateService that has 3 functionalities: login, logout, and islogged 
+// Description: Define the authenticateService that has 3 functionalities: login, logout, and islogged
 
-var app = angular.module("routerApp");
-app.factory('authenticate', function($http, session) {
-    var res;
-
+routerApp.factory('authenticate', function($http,session) {
     return {
-        getUser: function() {
-            var user = session.get('user');
-            var psw = session.get('psw');
-            var promise = $http.post('/api/login', {
-        userName: user,
-        password: psw
-    });
-    promise.then(function(response) {
-        res = response.data.authentication;
+        login: function(username,password,callback) {
+            $http.post('/api/login', { userName: username, password: password })
+                .success(function (response) {
+                    callback(response);
+                });
+        },
+        logout: function() {
+            session.destroy("user");
+            session.destroy("password");
+        },
+        islogged:function(){
 
-    }, function() {
-        console.log("Ooooops");
-    });
-            return res;
         }
-    };
+    }
 });

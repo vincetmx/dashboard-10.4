@@ -11,13 +11,13 @@
             </div>
         </div>&nbsp;&nbsp;&nbsp;&nbsp;
         <button class="btn btn-danger"> Add Item</button>&nbsp;&nbsp;&nbsp;&nbsp;
-        <input ng-model="query" type="text" placeholder="Name">
-        <input type="text" placeholder="Author">
-        <input type="text" placeholder="Like">
-        <input type="text" placeholder="Comment">
+        <input ng-model="search.name" type="text" placeholder="Name">
+        <input ng-model="search.author" type="text" placeholder="Author">
+        <input ng-model="search.like" type="text" placeholder="Like">
+        <input ng-model="search.comment" type="text" placeholder="Comment">
     </div>
     <div class="row" ng-hide="showme">
-        <div ng-repeat="myTable in myData.works | filter:query | orderBy:'name'" class="col-xs-12 col-sm-6 col-md-4">
+        <div ng-repeat="myTable in myData.works | filter:search" class="col-xs-12 col-sm-6 col-md-4">
             <div ng-src="{{myTable.image}}" class="thumbnail" style="border: 0">
                 <img ng-src="{{myTable.image}}">
                 <div class="caption" style="padding: 0">
@@ -34,15 +34,15 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Auther</th>
-                    <th>Like</th>
-                    <th>Comment</th>
+                    <th ng-click="orderByMe('name')">Name</th>
+                    <th ng-click="orderByMe('auther')">Auther</th>
+                    <th ng-click="orderByMe('like')">Like</th>
+                    <th ng-click="orderByMe('comment')">Comment</th>
                     <th>Modify</th>
                     <th>Remove</th>
                 </tr>
             </thead>
-            <tbody ng-repeat="myTable in myData.works">
+            <tbody ng-repeat="myTable in myData.works | filter:search | orderBy:myOrderBy">
                 <tr>
                     <td>{{myTable.title}}</td>
                     <td>{{myTable.author}}</td>
