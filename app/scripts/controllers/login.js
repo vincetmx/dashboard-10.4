@@ -9,7 +9,7 @@ routerApp.controller('login', function($scope, $location, authenticate, session)
         session.set("password", $scope.password);
         authenticate.login($scope.username, $scope.password, function(response) {
             if(response) {
-                $location.path("/root");
+                $location.path("/root/work");
             }
         });
     }
