@@ -1,14 +1,6 @@
 'use strict';
-/**
- * @ngdoc app
- * @name dashboard
- * @description
- * # dashboard
- *
- * Main module of the application. Define the routing architecture for the app
- */
 
-var routerApp = angular.module('routerApp', ['ui.router']);
+var routerApp = angular.module('routerApp', ['ui.router','ui.bootstrap']);
 
 routerApp.config(function($stateProvider, $urlRouterProvider) {
 

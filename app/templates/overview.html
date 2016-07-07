@@ -1,3 +1,27 @@
-<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-    <h1>Overview</h1>
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2" ng-controller="profileCtrl">
+    <div class="totalview">
+        <h1>Overview</h1>
+        <div class="overview">
+            <label style="font-size: 30px"><span ng-model="fullname">{{fullname}} - </span><span ng-model="nickname">{{nickname}}</span></label><br>
+            <img ng-src="{{profileImage}}">
+            <p>Welcome to dashboard application. This application guide will introduce you to things that you can do while staying here. All the sections mentioned below can be accessed from the navigation menu on the left siede</p>
+            <div class="linkBox">
+                <a data-toggle="collapse" data-target="#demo1">Work Section</a>
+            </div>
+            <div id="demo1" class="collapse" style="background: white">
+                <p style="padding: 10px 10px 10px 10px; font-size: 19px; border: solid 1px #b3b3b3;">This section contains the demonstration for all the final products that has been produced in the market</p>
+            </div>
+            <div class="linkBox"><a data-toggle="collapse" data-target="#demo2">Producer Section</a></div>
+            <div id="demo2" class="collapse" style="background: white">
+                <p style="padding: 10px 10px 10px 10px; font-size: 19px; border: solid 1px #b3b3b3;">This section contains information about the creator of all the works and how to get in touch with them</p>
+            </div>
+            <div class="linkBox">
+                <a data-toggle="collapse" data-target="#demo3">Cantact Section</a>
+            </div>
+            <div id="demo3" class="collapse" style="background: white">
+                <p style="padding: 10px 10px 10px 10px; font-size: 19px; border: solid 1px #b3b3b3;">This section provides a gateway for users to voice out opinions regarding the application and any other questions or concerns that one might have</p>
+            </div>
+        </div>
+    </div>
 </div>
+<link rel="stylesheet" href="../assets/styles/main.css">

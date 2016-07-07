@@ -7,6 +7,7 @@ routerApp.controller('workController',function($scope, $http){
     $http.get('/api/work')
         .success(function(data) {
             $scope.myData = data;
+            console.log(data.works);
         })
     $scope.addItem = function(){
         $scope.myData.works.push({
