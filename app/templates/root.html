@@ -1,8 +1,6 @@
 <nav class="navbar navDetail navbar-fixed-top" ng-controller="userCtrl">
-    <div class="navbar-header">
-        <a class="navbar-brand">
-            <img alt="Brand" src="../assets/images/src/app/logo.png">
-        </a>
+    <div class="navbar-brand">
+        <img alt="Brand" src="../assets/images/src/app/logo.png">
     </div>
     <div class="navbar-brand" ng-model="name">{{name}}</div>
     <div class="navbar-brand">{{CurrentDate | date: 'MM/dd/yyyy'}}</div>
@@ -11,22 +9,22 @@
 <div>
     <div class="row">
         <div id="sidebar-wrapper">
-            <div class="col-sm-3 col-md-2 sidebar">
-            <ul class="nav nav-sidebar list-inline">
-                <li>
-                    <a ui-sref=".overview"><i class="fa fa-cloud" aria-hidden="true"></i>&nbsp Overview</a>
-                </li>
-                <li>
-                    <a ui-sref=".work" class="active"><i class="fa fa-briefcase" aria-hidden="true">&nbsp Work</i></a>
-                </li>
-                <li>
-                    <a ui-sref=".producer"><i class="fa fa-product-hunt" aria-hidden="true">&nbsp Producer</i></a>
-                </li>
-                <li>
-                    <a ui-sref=".contact"><i class="fa fa-compress" aria-hidden="true">&nbsp Contact</i></a>
-                </li>
-            </ul>
-        </div>
+            <div class="col-xs-6 col-sm-9 col-md-2 sidebar-offcanvas" id="sidebar">
+                <ul class="nav nav-sidebar list-group">
+                    <li>
+                        <a ui-sref=".overview"><i class="fa fa-cloud" aria-hidden="true"></i>&nbsp Overview</a>
+                    </li>
+                    <li>
+                        <a ui-sref=".work" class="active"><i class="fa fa-briefcase" aria-hidden="true">&nbsp Work</i></a>
+                    </li>
+                    <li>
+                        <a ui-sref=".producer"><i class="fa fa-product-hunt" aria-hidden="true">&nbsp Producer</i></a>
+                    </li>
+                    <li>
+                        <a ui-sref=".contact"><i class="fa fa-compress" aria-hidden="true">&nbsp Contact</i></a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>

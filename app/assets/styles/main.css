@@ -22,3 +22,8 @@
     background-color: lightgoldenrodyellow;
     margin-top: 20px;
 }
+@media (max-width: 768px) {
+    .totalview{
+        margin-top: 40px;
+    }
+}

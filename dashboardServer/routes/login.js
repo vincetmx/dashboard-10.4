@@ -7,8 +7,8 @@ router.post('/', function(req, res, next) {
         res.send({
             authentication: 'success'
         });
-    } else {
-        res.status(403).send({
+    }else{
+    	res.send({
             authentication: 'fail'
         });
     }

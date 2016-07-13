@@ -5,11 +5,13 @@
 
 routerApp.controller('login', function($scope, $location, authenticate, session) {
     $scope.submitForm = function() {
-        session.set("user", $scope.username);
-        session.set("password", $scope.password);
         authenticate.login($scope.username, $scope.password, function(response) {
-            if(response) {
+            if(response.authentication == "success") {
+                session.set("user", $scope.username);
+                session.set("password", $scope.password);
                 $location.path("/root/work");
+            }else{
+                $scope.error = "Could login please check your username and password";
             }
         });
     }
